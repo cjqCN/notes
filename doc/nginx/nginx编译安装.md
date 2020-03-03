@@ -15,6 +15,9 @@
 ## 安装完毕
 安装目录在`/home/cjq/ngnix`, 配置 `/home/cjq/ngnix/config`
 
+## 配置高亮
+`cp -r contrib/vim/* ~/.vim/`
+
 ## 命令(在安装目录下执行)
 - 校验配置 `./sbin/nginx -t`
 - 启动 `./sbin/nginx [-c $config_path]`
