@@ -2,6 +2,9 @@ package thread;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ * 简单限流器
+ */
 public class Limiter extends Semaphore {
 
     private int maxPermit;
