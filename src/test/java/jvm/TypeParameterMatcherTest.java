@@ -14,15 +14,16 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @Measurement(iterations = 1)
 public class TypeParameterMatcherTest<T> {
 
-    private AbstractListener<Integer> abstractListener = new AbstractListener<Integer>() {
+    private AbstractListener<Tuple2<Integer, Integer>> abstractListener = new AbstractListener<Tuple2<Integer, Integer>>() {
         @Override
-        public void accept0(Integer event) {
+        public void accept0(Tuple2<Integer, Integer> event) {
+            System.out.println(event);
         }
     };
 
     @Benchmark
     public void test() {
-        abstractListener.accept(1);
+        abstractListener.accept(Tuple2.of("dadad", "dadad"));
     }
 
 
